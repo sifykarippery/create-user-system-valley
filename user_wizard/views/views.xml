@@ -23,7 +23,7 @@
       <field name="arch" type="xml">
         <form string="user wizard">
           <group><field name="primary_client"/>
-          <field name="user_type"/>
+          <field name="user_type"domain="[('category_id','ilike','demo_user_wizard')]"/>
           <field name="first_name"/>
           <field name="last_name"/>
           <field name="email" widget="email"/>

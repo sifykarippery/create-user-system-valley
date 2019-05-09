@@ -1,30 +1,47 @@
 <odoo>
     <data>
-        <!--  -->
-        <!--   <record id="object0" model="user_wizard.user_wizard"> -->
-        <!--     <field name="name">Object 0</field> -->
-        <!--     <field name="value">0</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object1" model="user_wizard.user_wizard"> -->
-        <!--     <field name="name">Object 1</field> -->
-        <!--     <field name="value">10</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object2" model="user_wizard.user_wizard"> -->
-        <!--     <field name="name">Object 2</field> -->
-        <!--     <field name="value">20</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object3" model="user_wizard.user_wizard"> -->
-        <!--     <field name="name">Object 3</field> -->
-        <!--     <field name="value">30</field> -->
-        <!--   </record> -->
-        <!--  -->
-        <!--   <record id="object4" model="user_wizard.user_wizard"> -->
-        <!--     <field name="name">Object 4</field> -->
-        <!--     <field name="value">40</field> -->
-        <!--   </record> -->
-        <!--  -->
+       <odoo>
+    <data>
+<record model="ir.module.category" id="demo_user_wizard">
+  <field name="name">Demo user Wizard Group</field>
+  <field name="description">User access level for this module</field>
+  <field name="sequence">3</field>
+</record>
+        <record model="res.groups" id="group_admin_user">
+            <field name="name">Admin User</field>
+                 <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+           <record model="res.groups" id="group_categorise_user">
+            <field name="name">Categorise User</field>
+              <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+         <record model="res.groups" id="group_action_creator">
+            <field name="name">Action Creator</field>
+             <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+
+<record model="res.groups" id="group_content_supervisor">
+            <field name="name">Content Supervisor</field>
+    <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+       <record model="res.groups" id="group_content_creator_external">
+            <field name="name">Content Creator (External)</field>
+           <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+        <record model="res.groups" id="group_content_creator_internal">
+            <field name="name">Content Creator (Internal) </field>
+            <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+        <record model="res.groups" id="group_end_user">
+            <field name="name">End User</field>
+            <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+          <record model="res.groups" id="group_action_user">
+            <field name="name">Action User</field>
+              <field name="category_id" ref="demo_user_wizard"/>
+        </record>
+
+    </data>
+</odoo>
     </data>
 </odoo>
